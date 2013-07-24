@@ -1,0 +1,22 @@
+.debug-panel {
+  display: none;
+  position: absolute;
+  color: black;
+  top: 10px;
+  left: 10px;
+  width: 100px;
+  background-color: #AAAAAA;
+  padding: 10px;
+  font-size: 16px;
+}
+
+.debug-reveal {
+  /*display: none;*/
+  position: absolute;
+  opacity: .7;
+  margin: 10px;
+}
+
+.active {
+  display: inline-block;
+}

@@ -1,0 +1,37 @@
+<template name="debug">
+  <button class="debug-reveal {{notActiveDuringDebug}}">
+    <i class="icon-wrench"></i>
+  </button>
+  <div class="debug-panel {{activeDuringDebug}}"> 
+    <button id="regenerate">Regenerate</button>
+    <button id="camera-toggle"><i class="icon-camera-retro"></i> - {{cameraMode}}</button>
+    <select id="camera-target">
+      {{#each biomes}}
+        <option value="{{_id}}">{{type}}</option>
+      {{/each}}
+    </select>
+
+    <h5>Zoom</h5>
+    <button id="increment-zoom">+</button>
+    <button id="decrement-zoom">-</button>
+
+    <h5>Width</h5>
+    <button id="increment-width">+</button>
+    <button id="decrement-width">-</button>
+
+    <h5>Height</h5>
+    <button id="increment-height">+</button>
+    <button id="decrement-height">-</button>
+
+    {{#with player}}
+      <h5>Position: ({{x}}, {{y}})</h5>
+    {{/with}}
+
+    <h5>Players</h5>
+    <ul>
+      {{#each players}}
+        <li>{{name}}</li>
+      {{/each}}
+    </ul>
+  </div>
+</template>
